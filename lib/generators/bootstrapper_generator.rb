@@ -1,5 +1,9 @@
+require 'rails/generators'
+ 
 class BootstrapperGenerator < Rails::Generators::Base
-  source_root File.expand_path('../templates', __FILE__)
+  def self.source_root
+    @source_root ||= File.join(File.dirname(__FILE__), 'templates')
+  end
 
   def copy_files
     template 'bootstrap.erb', 'db/bootstrap.rb'

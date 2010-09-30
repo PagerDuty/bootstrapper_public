@@ -1,7 +1,7 @@
 Bootstrapper
 ============
 
-  A rather simple plugin that executes a block to load seed/bootstrap data
+  A rather simple gem that executes a block to load seed/bootstrap data
   into a database.
 
 
