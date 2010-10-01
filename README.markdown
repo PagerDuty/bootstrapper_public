@@ -9,8 +9,16 @@ Example
 =======
 
   Run the bootstrapper generator:
+  
+  Rails 3:
+  
+    ./script/rails g bootstrapper
+  
+  Rails 2:
 
     ruby script/generate bootstrapper
+    
+    
 
   This will place a bootstrap.rb file in the db directory within your project.
 
@@ -93,3 +101,4 @@ FactoryGirl [http://github.com/thoughtbot/factory_girl/tree/master](http://githu
 Forgery [http://github.com/sevenwire/forgery/tree/master](http://github.com/sevenwire/forgery/tree/master)
 
 Copyright (c) 2008 Sevenwire, released under the MIT license
+Contributions from Jared Mehle (jrmehle)
