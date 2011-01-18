@@ -1,6 +1,6 @@
 class Bootstrapper
 
-  VERSION = "0.1.0"
+  VERSION = "0.2.0"
 
   class_inheritable_accessor :tasks
   write_inheritable_attribute :tasks, HashWithIndifferentAccess.new
@@ -46,7 +46,7 @@ class Bootstrapper
   end
 
   def self.fixtures(*fixtures)
-    Fixtures.create_fixtures(File.join(RAILS_ROOT, 'db', 'populate'), fixtures)
+    Fixtures.create_fixtures(File.join(Rails.root, 'db', 'populate'), fixtures)
 
   end
 
