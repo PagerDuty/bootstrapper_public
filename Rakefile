@@ -26,7 +26,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "bootstrapper"
     gem.summary = "The better way to load seed data (than seeds.rb)"
-    gem.version = '0.1.0'
+    gem.version = '0.3.0'
     gem.email = "jrmehle@gmail.com"
     gem.homepage = "http://github.com/jrmehle/bootstrapper"
     gem.authors = ["Jared Mehle"]
