@@ -38,8 +38,19 @@ class Bootstrapper
     end
 
     tables.each do |table|
-      ActiveRecord::Base.connection.truncate_table(table)
+      self.truncate_table(table)
     end
+  end
+
+  def self.truncate_table(table_name)
+    conn = ActiveRecord::Base.connection
+    sql = case conn.adapter_name.downcase
+          when /mysql/
+            "TRUNCATE TABLE #{conn.quote_table_name(table_name)};"
+          else
+            "DELETE FROM #{table_name}"
+          end
+    conn.execute(sql)
   end
 
   def self.fixtures(*fixtures)

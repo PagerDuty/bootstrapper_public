@@ -18,8 +18,6 @@ Gem::Specification.new do |s|
     "lib/bootstrapper.rb",
     "lib/bootstrapper/bootstrapper.rb",
     "lib/bootstrapper/railtie.rb",
-    "lib/connection_adapters/abstract_adapter.rb",
-    "lib/connection_adapters/mysql_adapter.rb",
     "lib/generators/bootstrapper_generator.rb",
     "lib/generators/templates/bootstrap.erb",
     "lib/tasks/bootstrap.rake"
