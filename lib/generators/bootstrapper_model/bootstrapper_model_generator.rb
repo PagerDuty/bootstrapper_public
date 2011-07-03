@@ -1,8 +1,11 @@
-class BootstrapperModelGenerator < Rails::Generator::NamedBase
+require 'rails/generators'
+
+class BootstrapperModelGenerator < Rails::Generators::NamedBase
+  def self.source_root
+    @source_root ||= File.join(File.dirname(__FILE__), 'templates')
+  end
+
   def manifest
-    record do |m|
-      m.directory 'db/bootstrapper' 
-      m.template 'bootstrapper_model.erb', "db/bootstrapper/#{plural_name}.rb"
-    end
+    template 'bootstrapper_model.erb', "db/bootstrapper/#{plural_name}.rb"
   end
 end

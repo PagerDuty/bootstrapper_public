@@ -6,6 +6,7 @@ class BootstrapperGenerator < Rails::Generators::Base
   end
 
   def copy_files
+    empty_directory 'db/bootstrapper'
     template 'bootstrap.erb', 'db/bootstrap.rb'
   end
 end
