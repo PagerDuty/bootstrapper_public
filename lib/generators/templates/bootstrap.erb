@@ -1,3 +1,5 @@
+Dir.glob(File.dirname(__FILE__) + '/bootstrapper/**/*.rb').each { |f| require f }
+
 <%- ActiveRecord::Base.configurations.keys.each do |env| -%>
 Bootstrapper.for :<%= env %> do |b|
 end
