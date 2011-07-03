@@ -14,11 +14,11 @@ Example
 
   Rails 3:
 
-    ./script/rails g bootstrapper
+    script/rails g bootstrapper
 
   Rails 2:
 
-    ruby script/generate bootstrapper
+    script/generate bootstrapper
 
 
   This will place a bootstrap.rb file in the db directory within your project.
@@ -96,6 +96,30 @@ Example
 
     b.run :users
     b.run :production
+
+bootstapper_model generator
+===========================
+
+  You can create model-specific bootstrap files using the bootstrapper_model generator. This generator taks one argument: the name of the bootstrap file. 
+
+  Rails 3:
+
+    script/rails g bootstrapper_model User
+
+  Rails 2:
+
+    script/generate bootstrapper_model User
+
+
+  Either of those will generate a file:
+
+    db/bootstrapper/users.rb
+
+  Whose contents will be:
+
+    Bootstrapper.for :users do |b|
+    end
+
 
 FactoryGirl [http://github.com/thoughtbot/factory_girl/tree/master](http://github.com/thoughtbot/factory_girl/tree/master)
 
