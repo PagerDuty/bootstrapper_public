@@ -55,7 +55,6 @@ class Bootstrapper
 
   def self.fixtures(*fixtures)
     Fixtures.create_fixtures(File.join(Rails.root, 'db', 'populate'), fixtures)
-
   end
 
   def self.sql(sql)
