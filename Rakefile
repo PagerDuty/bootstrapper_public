@@ -31,8 +31,8 @@ begin
     gem.homepage = "http://github.com/jrmehle/bootstrapper"
     gem.authors = ["Jared Mehle"]
     gem.files = FileList["{lib}/**/*"]
-    gem.add_dependency("activerecord",  ">= 2.3.0")
-    gem.add_dependency("activesupport", ">= 2.3.0")
+    gem.add_dependency("activerecord",  ">= 3.0.0")
+    gem.add_dependency("activesupport", ">= 3.0.0")
   end
   
   Jeweler::GemcutterTasks.new
