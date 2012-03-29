@@ -1,6 +1,6 @@
 class Bootstrapper
-  class_inheritable_accessor :tasks
-  write_inheritable_attribute :tasks, ActiveSupport::HashWithIndifferentAccess.new
+  class_attribute :tasks
+  self.tasks = ActiveSupport::HashWithIndifferentAccess.new
 
   def self.for(key, &block)
     tasks[key] = block
