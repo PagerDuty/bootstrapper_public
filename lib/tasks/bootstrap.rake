@@ -16,14 +16,6 @@ end
 
 desc "Resets the rails environment"
 task :reset_environment do
-  # Ripped directly out of railties/lib/console_app.rb in rails and
-  # only changed slightly.
-  puts "Reloading environment..."
-  if ActionController::Dispatcher.respond_to?(:cleanup_application)
-    dispatcher = ActionController::Dispatcher
-  else
-    dispatcher = ActionController::Dispatcher.new($stdout)
-  end
-  dispatcher.cleanup_application
-  dispatcher.reload_application
+  ActionDispatch::Reloader.cleanup!
+  ActionDispatch::Reloader.prepare!
 end
