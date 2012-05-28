@@ -18,4 +18,5 @@ desc "Resets the rails environment"
 task :reset_environment do
   ActionDispatch::Reloader.cleanup!
   ActionDispatch::Reloader.prepare!
+  FactoryGirl.reload if defined?(FactoryGirl)
 end
