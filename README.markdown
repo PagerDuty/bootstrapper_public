@@ -1,3 +1,5 @@
+This gem is unused & unmaintained.  Plans to deprecate, archive and/or delete this repo are in process.  Cheers!
+
 Bootstrapper
 ============
 
